@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https.csngenerator.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>C. S. N</h2>
+    <form id="certificateForm">
+        <label for="messrs">Messrs:</label>
+        <input type="text" id="messrs">
+        
+        <label for="of">Of:</label>
+        <input type="text" id="of">
+        
+        <label for="type">Type of Contract:</label>
+        <input type="text" id="type">
+        
+        <label for="contractRef">Contract Ref No:</label>
+        <input type="text" id="contractRef">
+        
+        <label for="totalValue">Total Contract Value:</label>
+        <input type="text" id="totalValue">
+        
+        <label for="dateAward">Date of Contract Award:</label>
+        <input type="text" id="dateAward">
+        
+        <label for="duration">Duration of Contract:</label>
+        <input type="text" id="duration">
+        
+        <label for="issuedDate">Issued Date:</label>
+        <input type="text" id="issuedDate">
+        
+        <label for="dayOf">Day Of:</label>
+        <input type="text" id="dayOf">
+        
+        <label for="inYear">In The Year:</label>
+        <input type="text" id="inYear">
+        
+        <label for="signDate">Sign Date:</label>
+        <input type="text" id="signDate">
+        
+        <button type="button" onclick="showCertificate()">Generate Certificate</button>
+        <button type="button" class="clear" onclick="clearForm()">Clear</button>
+    </form>
+
+    <canvas id="certificateCanvas"></canvas>
+
+    <div id="certificateControls" class="certificate-controls" style="display: none; text-align: center;">
+        <label class="controls">
+            Blur Certificate:
+            <label class="switch">
+                <input type="checkbox" id="blurToggle" onclick="toggleBlur()">
+                <span class="slider"></span>
+            </label>
+        </label>
+        <br><br>
+        <label class="controls">
+            Blur Amount:
+            <input type="number" id="blurAmount" value="5" onchange="updateBlurAmount()">px
+        </label>
+        <br><br>
+        <button onclick="downloadImage()">Save as Image</button>
+        <button onclick="downloadPDF()">Download as PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+     
+</body>
+</html>
