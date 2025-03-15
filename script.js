@@ -12,7 +12,7 @@ let blurAmount = 5;
             const canvas = document.getElementById('certificateCanvas');
             const ctx = canvas.getContext('2d');
             const img = new Image();
-            img.src = 'cert.jpg';
+            img.src = 'certt.jpg';
             
             img.onload = function () {
                 canvas.width = 3501;
